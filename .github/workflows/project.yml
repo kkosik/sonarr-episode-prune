@@ -1,4 +1,4 @@
- name: project
+name: project
 on:
   workflow_dispatch:
     branches: master
