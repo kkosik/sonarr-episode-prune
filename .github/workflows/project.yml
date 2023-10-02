@@ -1,4 +1,4 @@
-name: project
+ name: project
 on:
   workflow_dispatch:
     branches: master
@@ -29,7 +29,7 @@ jobs:
 
       - name: Build Container Image
         run: |
-          docker buildx-version build \
+          docker buildx build \
             -t kkosik/sonarr-episode-prune:${GITHUB_REF##*/} \
             --platform linux/amd64,linux/arm/v7,linux/arm64 \
             -f Dockerfile \
