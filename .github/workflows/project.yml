@@ -1,5 +1,9 @@
 name: project
 on:
+  workflow_dispatch:
+    branches: master
+    tags:
+      - v*
   push:
     branches: master
     tags:
